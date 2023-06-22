@@ -1,0 +1,1652 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Datastory Draft C3 Informatievisualisatie &#8212; Jupyter Book Template</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="docs/home.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jupyter Book Template</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="docs/home.html">
+                    Jupyter Book Tutorial
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="docs/notebook.html">Example Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/yenchiah/jupyter-book-template/blob/main/docs/notebook.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template/issues/new?title=Issue%20on%20page%20%2Fnotebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Datastory Draft C3 Informatievisualisatie</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Datastory Draft C3 Informatievisualisatie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opwarming-van-de-aarde-hoe-zit-dat-nou">Opwarming van de aarde, hoe zit dat nou?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introductie">Introductie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datapreprocessing">Datapreprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-1-3d-spreidingsplot-over-bevolking-oppervlakte-en-uitstoot">PLOT 1: 3D spreidingsplot over bevolking, oppervlakte en uitstoot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-2-donut-diagram-over-gemiddelde-procentuele-uitstoot-per-land-2010-2019">PLOT 2: Donut diagram over gemiddelde procentuele uitstoot per land (2010-2019)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-3-spreidingsplot-voor-temperatuursstijging-en-co2-uitstoot-per-land-2010-2019">PLOT 3: Spreidingsplot voor temperatuursstijging en CO2 uitstoot per land (2010-2019)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-4-landen-met-een-stijging-van-1-5-graad-celsius">PLOT 4: Landen met een stijging van 1.5 graad celsius</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-5-gemiddelde-mondiale-temperatuursstijging">PLOT 5: Gemiddelde mondiale temperatuursstijging</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bronnen">BRONNEN</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#generative-ai-vermelding">GENERATIVE AI VERMELDING</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="datastory-draft-c3-informatievisualisatie">
+<h1>Datastory Draft C3 Informatievisualisatie<a class="headerlink" href="#datastory-draft-c3-informatievisualisatie" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Thijs Schmidt (14605023)</p></li>
+<li><p>Sofie Shamba (14610027)</p></li>
+<li><p>Koray Pieterse (13722778)</p></li>
+<li><p>Sam Busstra (14643286)</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="opwarming-van-de-aarde-hoe-zit-dat-nou">
+<h1>Opwarming van de aarde, hoe zit dat nou?<a class="headerlink" href="#opwarming-van-de-aarde-hoe-zit-dat-nou" title="Permalink to this heading">#</a></h1>
+<section id="introductie">
+<h2>Introductie<a class="headerlink" href="#introductie" title="Permalink to this heading">#</a></h2>
+<p>Klimaatverandering staat de laatste jaren wereldwijd hoog op de agenda. Volgens de Rijksoverheid (2023 ) is de gemiddelde temperatuur van de aarde namelijk met 1 graad gestegen. Niet alleen dat, maar ook de zeespiegel is in dezelfde tijd met 20 centimeter gestegen. Dit kan veel gevolgen hebben voor de mens en de natuur als het steeds warmer wordt op aarde. Zware stormen, grote overstromingen en een tekort aan drinkwater of voedsel zijn consequenties waar we in de toekomst mee moeten omgaan. Daarom hebben al veel landen, waaronder de Europese landen, al klimaatdoelstellingen voor de komende jaren. Met het oog op de toekomst is het daarom ook belangrijk om te kijken naar welke landen veel CO2-uitstoot hebben. Een reden voor de temperatuurverandering kan zijn, dat als een land een hoge CO2-uitstoot heeft, dat dat land ook een sterke temperatuurverandering ervaart. Het gaat daarbij om de nationale schaal en de bijdrage aan het broeikaseffect. De vuistregel die geldt is: hoe hoger de CO2-uitstoot binnen een land, hoe groter de verwachte temperatuurstijging binnen dat land. Een andere kijk op de klimaatverandering door de CO2-uitstoot kan zijn dat hoe groter een land is in vierkante kilometer, hoe groter de CO2-uitstoot. Hierbij is de populatie van een land ook belangrijk, omdat hoe meer mensen er in een land wonen hoe hoger de CO2-uitstoot waarschijnlijk is doordat al die mensen meer energie verbranden.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importeer alle benodigde packages</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">Series</span><span class="p">,</span> <span class="n">DataFrame</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">seterr</span><span class="p">(</span><span class="n">divide</span><span class="o">=</span><span class="s1">&#39;raise&#39;</span><span class="p">,</span> <span class="n">over</span><span class="o">=</span><span class="s1">&#39;raise&#39;</span><span class="p">,</span> <span class="n">under</span><span class="o">=</span><span class="s1">&#39;raise&#39;</span><span class="p">,</span> <span class="n">invalid</span><span class="o">=</span><span class="s1">&#39;raise&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="datapreprocessing">
+<h2>Datapreprocessing<a class="headerlink" href="#datapreprocessing" title="Permalink to this heading">#</a></h2>
+<p>Er worden 2 datasets gebruikt in het onderzoek. De eerste dataset ‘CO2 Emission by countries Year wise (1750-2022)’ van <a class="reference external" href="http://Kaggle.com">Kaggle.com</a> gaat over de CO2-uitstoot door landen per jaar, van 1750 tot 2022. Met de dataset kunnen voorspellingen worden gedaan over klimaatverandering en de opwarming van de aarde. Voor elk land wordt aangegeven hoeveel CO2 het heeft uitgestoten. De tweede dataset ‘Temperature Change’ van <a class="reference external" href="http://Kaggle.com">Kaggle.com</a> bevat data over de gemiddelde temperatuurverandering per land. De gegevens in de dataset bevatten wekelijkse, maandelijkse en jaarlijkse temperatuurafwijkingen gedurende de periode van 1961-2019.
+De data van de datasets wordt ‘processed’ door de relevante variabelen te selecteren aan de hand van de perspectieven en de argumenten die zijn gesteld. We gebruiken de landen als ‘key variabel’ en de jaren 2010-2019 om de twee datasets met elkaar te vergelijken. Ook worden de ontbrekende waarden in de datasets gefilterd en eruit gehaald. Om de data met elkaar te vergelijken wordt de gemiddelde jaarlijkse uitstoot per land tussen 2010 en 2019 genomen. Vervolgens wordt de uitstoot per vierkante kilometer berekend door de gemiddelde jaarlijkse uitstoot te delen door de totale oppervlakte van het land. Daarna wordt dit ook gedaan voor de bevolking, door de gemiddelde jaarlijkse uitstoot te delen door de bevolking, waardoor je de gemiddelde jaarlijkse uitstoot per hoofd krijgt voor ieder land.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lees dataframe CO2 in</span>
+<span class="n">CO2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;CO2.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin-1&#39;</span><span class="p">)</span>
+<span class="n">CO2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Code</th>
+      <th>Calling Code</th>
+      <th>Year</th>
+      <th>CO2 emission (Tons)</th>
+      <th>Population(2022)</th>
+      <th>Area</th>
+      <th>% of World</th>
+      <th>Density(km2)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Afghanistan</td>
+      <td>AF</td>
+      <td>93</td>
+      <td>1750</td>
+      <td>0.0</td>
+      <td>41128771.0</td>
+      <td>652230.0</td>
+      <td>0.40%</td>
+      <td>63/km²</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Afghanistan</td>
+      <td>AF</td>
+      <td>93</td>
+      <td>1751</td>
+      <td>0.0</td>
+      <td>41128771.0</td>
+      <td>652230.0</td>
+      <td>0.40%</td>
+      <td>63/km²</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Afghanistan</td>
+      <td>AF</td>
+      <td>93</td>
+      <td>1752</td>
+      <td>0.0</td>
+      <td>41128771.0</td>
+      <td>652230.0</td>
+      <td>0.40%</td>
+      <td>63/km²</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Afghanistan</td>
+      <td>AF</td>
+      <td>93</td>
+      <td>1753</td>
+      <td>0.0</td>
+      <td>41128771.0</td>
+      <td>652230.0</td>
+      <td>0.40%</td>
+      <td>63/km²</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Afghanistan</td>
+      <td>AF</td>
+      <td>93</td>
+      <td>1754</td>
+      <td>0.0</td>
+      <td>41128771.0</td>
+      <td>652230.0</td>
+      <td>0.40%</td>
+      <td>63/km²</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>59615</th>
+      <td>Zimbabwe</td>
+      <td>ZW</td>
+      <td>263</td>
+      <td>2016</td>
+      <td>736467042.0</td>
+      <td>16320537.0</td>
+      <td>390757.0</td>
+      <td>0.30%</td>
+      <td>42/km²</td>
+    </tr>
+    <tr>
+      <th>59616</th>
+      <td>Zimbabwe</td>
+      <td>ZW</td>
+      <td>263</td>
+      <td>2017</td>
+      <td>746048675.0</td>
+      <td>16320537.0</td>
+      <td>390757.0</td>
+      <td>0.30%</td>
+      <td>42/km²</td>
+    </tr>
+    <tr>
+      <th>59617</th>
+      <td>Zimbabwe</td>
+      <td>ZW</td>
+      <td>263</td>
+      <td>2018</td>
+      <td>757903042.0</td>
+      <td>16320537.0</td>
+      <td>390757.0</td>
+      <td>0.30%</td>
+      <td>42/km²</td>
+    </tr>
+    <tr>
+      <th>59618</th>
+      <td>Zimbabwe</td>
+      <td>ZW</td>
+      <td>263</td>
+      <td>2019</td>
+      <td>768852126.0</td>
+      <td>16320537.0</td>
+      <td>390757.0</td>
+      <td>0.30%</td>
+      <td>42/km²</td>
+    </tr>
+    <tr>
+      <th>59619</th>
+      <td>Zimbabwe</td>
+      <td>ZW</td>
+      <td>263</td>
+      <td>2020</td>
+      <td>779383468.0</td>
+      <td>16320537.0</td>
+      <td>390757.0</td>
+      <td>0.30%</td>
+      <td>42/km²</td>
+    </tr>
+  </tbody>
+</table>
+<p>59620 rows × 9 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># filter de CO2 dataframe</span>
+<span class="n">filtered_CO2</span> <span class="o">=</span> <span class="n">CO2</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">CO2</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2010</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">CO2</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2019</span><span class="p">)]</span>
+
+<span class="c1"># groepeer de dataframe op land</span>
+<span class="n">CO2_grouped</span> <span class="o">=</span> <span class="n">filtered_CO2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Country&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">CO2_grouped</span> <span class="o">=</span> <span class="n">CO2_grouped</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># maak nieuwe kolommen aan voor uitstoot per km2 en hoofd bevolking</span>
+<span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;Uitstoot per km2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;CO2 emission (Tons)&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;Area&#39;</span><span class="p">]</span>
+<span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;Uitstoot per hoofd vd bevolking&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;CO2 emission (Tons)&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;Population(2022)&#39;</span><span class="p">]</span>
+
+<span class="c1"># laat geüpdate frame zien</span>
+<span class="n">CO2_grouped</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/groupby.py:1490,</span> in <span class="ni">GroupBy._cython_agg_general.&lt;locals&gt;.array_func</span><span class="nt">(values)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1489</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1490</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">grouper</span><span class="o">.</span><span class="n">_cython_operation</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1491</span>         <span class="s2">&quot;aggregate&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1492</span>         <span class="n">values</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1493</span>         <span class="n">how</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1494</span>         <span class="n">axis</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">ndim</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1495</span>         <span class="n">min_count</span><span class="o">=</span><span class="n">min_count</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1496</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1497</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1498</span> <span class="k">except</span> <span class="ne">NotImplementedError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1499</span>     <span class="c1"># generally if we have numeric_only=False</span>
+<span class="g g-Whitespace">   </span><span class="mi">1500</span>     <span class="c1"># and non-applicable functions</span>
+<span class="g g-Whitespace">   </span><span class="mi">1501</span>     <span class="c1"># try to python agg</span>
+<span class="g g-Whitespace">   </span><span class="mi">1502</span>     <span class="c1"># TODO: shouldn&#39;t min_count matter?</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/ops.py:959,</span> in <span class="ni">BaseGrouper._cython_operation</span><span class="nt">(self, kind, values, how, axis, min_count, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">958</span> <span class="n">ngroups</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ngroups</span>
+<span class="ne">--&gt; </span><span class="mi">959</span> <span class="k">return</span> <span class="n">cy_op</span><span class="o">.</span><span class="n">cython_operation</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">960</span>     <span class="n">values</span><span class="o">=</span><span class="n">values</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">961</span>     <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">962</span>     <span class="n">min_count</span><span class="o">=</span><span class="n">min_count</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">963</span>     <span class="n">comp_ids</span><span class="o">=</span><span class="n">ids</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">964</span>     <span class="n">ngroups</span><span class="o">=</span><span class="n">ngroups</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">965</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">966</span> <span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/ops.py:657,</span> in <span class="ni">WrappedCythonOp.cython_operation</span><span class="nt">(self, values, axis, min_count, comp_ids, ngroups, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">649</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ea_wrap_cython_operation</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">650</span>         <span class="n">values</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">min_count</span><span class="o">=</span><span class="n">min_count</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">655</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">657</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cython_op_ndim_compat</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">658</span>     <span class="n">values</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">659</span>     <span class="n">min_count</span><span class="o">=</span><span class="n">min_count</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">660</span>     <span class="n">ngroups</span><span class="o">=</span><span class="n">ngroups</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">661</span>     <span class="n">comp_ids</span><span class="o">=</span><span class="n">comp_ids</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">662</span>     <span class="n">mask</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">663</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">664</span> <span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/ops.py:497,</span> in <span class="ni">WrappedCythonOp._cython_op_ndim_compat</span><span class="nt">(self, values, min_count, ngroups, comp_ids, mask, result_mask, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span>     <span class="k">return</span> <span class="n">res</span><span class="o">.</span><span class="n">T</span>
+<span class="ne">--&gt; </span><span class="mi">497</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_cython_op</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>     <span class="n">values</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">499</span>     <span class="n">min_count</span><span class="o">=</span><span class="n">min_count</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span>     <span class="n">ngroups</span><span class="o">=</span><span class="n">ngroups</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span>     <span class="n">comp_ids</span><span class="o">=</span><span class="n">comp_ids</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span>     <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span>     <span class="n">result_mask</span><span class="o">=</span><span class="n">result_mask</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span> <span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/ops.py:541,</span> in <span class="ni">WrappedCythonOp._call_cython_op</span><span class="nt">(self, values, min_count, ngroups, comp_ids, mask, result_mask, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">540</span> <span class="n">out_shape</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_output_shape</span><span class="p">(</span><span class="n">ngroups</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">541</span> <span class="n">func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_cython_function</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">kind</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">how</span><span class="p">,</span> <span class="n">values</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">is_numeric</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">542</span> <span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_cython_vals</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/ops.py:173,</span> in <span class="ni">WrappedCythonOp._get_cython_function</span><span class="nt">(cls, kind, how, dtype, is_numeric)</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span> <span class="k">if</span> <span class="s2">&quot;object&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">__signatures__</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">172</span>     <span class="c1"># raise NotImplementedError here rather than TypeError later</span>
+<span class="ne">--&gt; </span><span class="mi">173</span>     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>         <span class="sa">f</span><span class="s2">&quot;function is not implemented for this dtype: &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">175</span>         <span class="sa">f</span><span class="s2">&quot;[how-&gt;</span><span class="si">{</span><span class="n">how</span><span class="si">}</span><span class="s2">,dtype-&gt;</span><span class="si">{</span><span class="n">dtype_str</span><span class="si">}</span><span class="s2">]&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">176</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">177</span> <span class="k">return</span> <span class="n">f</span>
+
+<span class="ne">NotImplementedError</span>: function is not implemented for this dtype: [how-&gt;mean,dtype-&gt;object]
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/nanops.py:1692,</span> in <span class="ni">_ensure_numeric</span><span class="nt">(x)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1691</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1692</span>     <span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1693</span> <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1694</span>     <span class="c1"># e.g. &quot;1+1j&quot; or &quot;foo&quot;</span>
+
+<span class="ne">ValueError</span>: could not convert string to float: &#39;AFAFAFAFAFAFAFAFAFAF&#39;
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/nanops.py:1696,</span> in <span class="ni">_ensure_numeric</span><span class="nt">(x)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1695</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1696</span>     <span class="n">x</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1697</span> <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1698</span>     <span class="c1"># e.g. &quot;foo&quot;</span>
+
+<span class="ne">ValueError</span>: complex() arg is a malformed string
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">filtered_CO2</span> <span class="o">=</span> <span class="n">CO2</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">CO2</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2010</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">CO2</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2019</span><span class="p">)]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># groepeer de dataframe op land</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">CO2_grouped</span> <span class="o">=</span> <span class="n">filtered_CO2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Country&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">CO2_grouped</span> <span class="o">=</span> <span class="n">CO2_grouped</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># maak nieuwe kolommen aan voor uitstoot per km2 en hoofd bevolking</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/groupby.py:1855,</span> in <span class="ni">GroupBy.mean</span><span class="nt">(self, numeric_only, engine, engine_kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1853</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_numba_agg_general</span><span class="p">(</span><span class="n">sliding_mean</span><span class="p">,</span> <span class="n">engine_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1854</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1855</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cython_agg_general</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1856</span>         <span class="s2">&quot;mean&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1857</span>         <span class="n">alt</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">Series</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="n">numeric_only</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1858</span>         <span class="n">numeric_only</span><span class="o">=</span><span class="n">numeric_only</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1859</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1860</span>     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;groupby&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/groupby.py:1507,</span> in <span class="ni">GroupBy._cython_agg_general</span><span class="nt">(self, how, alt, numeric_only, min_count, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1503</span>         <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agg_py_fallback</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">ndim</span><span class="p">,</span> <span class="n">alt</span><span class="o">=</span><span class="n">alt</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1505</span>     <span class="k">return</span> <span class="n">result</span>
+<span class="ne">-&gt; </span><span class="mi">1507</span> <span class="n">new_mgr</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">grouped_reduce</span><span class="p">(</span><span class="n">array_func</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1508</span> <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wrap_agged_manager</span><span class="p">(</span><span class="n">new_mgr</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1509</span> <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wrap_aggregated_output</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/internals/managers.py:1503,</span> in <span class="ni">BlockManager.grouped_reduce</span><span class="nt">(self, func)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1499</span> <span class="k">if</span> <span class="n">blk</span><span class="o">.</span><span class="n">is_object</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1500</span>     <span class="c1"># split on object-dtype blocks bc some columns may raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">1501</span>     <span class="c1">#  while others do not.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1502</span>     <span class="k">for</span> <span class="n">sb</span> <span class="ow">in</span> <span class="n">blk</span><span class="o">.</span><span class="n">_split</span><span class="p">():</span>
+<span class="ne">-&gt; </span><span class="mi">1503</span>         <span class="n">applied</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1504</span>         <span class="n">result_blocks</span> <span class="o">=</span> <span class="n">extend_blocks</span><span class="p">(</span><span class="n">applied</span><span class="p">,</span> <span class="n">result_blocks</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1505</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/internals/blocks.py:329,</span> in <span class="ni">Block.apply</span><span class="nt">(self, func, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span> <span class="nd">@final</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span> <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Block</span><span class="p">]:</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span><span class="sd">     apply the function to my values; return a block if we are not</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span><span class="sd">     one</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">329</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">331</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_split_op_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/groupby.py:1503,</span> in <span class="ni">GroupBy._cython_agg_general.&lt;locals&gt;.array_func</span><span class="nt">(values)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1490</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">grouper</span><span class="o">.</span><span class="n">_cython_operation</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1491</span>         <span class="s2">&quot;aggregate&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1492</span>         <span class="n">values</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1496</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1497</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1498</span> <span class="k">except</span> <span class="ne">NotImplementedError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1499</span>     <span class="c1"># generally if we have numeric_only=False</span>
+<span class="g g-Whitespace">   </span><span class="mi">1500</span>     <span class="c1"># and non-applicable functions</span>
+<span class="g g-Whitespace">   </span><span class="mi">1501</span>     <span class="c1"># try to python agg</span>
+<span class="g g-Whitespace">   </span><span class="mi">1502</span>     <span class="c1"># TODO: shouldn&#39;t min_count matter?</span>
+<span class="ne">-&gt; </span><span class="mi">1503</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agg_py_fallback</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">ndim</span><span class="p">,</span> <span class="n">alt</span><span class="o">=</span><span class="n">alt</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1505</span> <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/groupby.py:1457,</span> in <span class="ni">GroupBy._agg_py_fallback</span><span class="nt">(self, values, ndim, alt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1452</span>     <span class="n">ser</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1454</span> <span class="c1"># We do not get here with UDFs, so we know that our dtype</span>
+<span class="g g-Whitespace">   </span><span class="mi">1455</span> <span class="c1">#  should always be preserved by the implemented aggregations</span>
+<span class="g g-Whitespace">   </span><span class="mi">1456</span> <span class="c1"># TODO: Is this exactly right; see WrappedCythonOp get_result_dtype?</span>
+<span class="ne">-&gt; </span><span class="mi">1457</span> <span class="n">res_values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">grouper</span><span class="o">.</span><span class="n">agg_series</span><span class="p">(</span><span class="n">ser</span><span class="p">,</span> <span class="n">alt</span><span class="p">,</span> <span class="n">preserve_dtype</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1459</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">Categorical</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1460</span>     <span class="c1"># Because we only get here with known dtype-preserving</span>
+<span class="g g-Whitespace">   </span><span class="mi">1461</span>     <span class="c1">#  reductions, we cast back to Categorical.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1462</span>     <span class="c1"># TODO: if we ever get &quot;rank&quot; working, exclude it here.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1463</span>     <span class="n">res_values</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="o">.</span><span class="n">_from_sequence</span><span class="p">(</span><span class="n">res_values</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">values</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/ops.py:994,</span> in <span class="ni">BaseGrouper.agg_series</span><span class="nt">(self, obj, func, preserve_dtype)</span>
+<span class="g g-Whitespace">    </span><span class="mi">987</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">_values</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">988</span>     <span class="c1"># we can preserve a little bit more aggressively with EA dtype</span>
+<span class="g g-Whitespace">    </span><span class="mi">989</span>     <span class="c1">#  because maybe_cast_pointwise_result will do a try/except</span>
+<span class="g g-Whitespace">    </span><span class="mi">990</span>     <span class="c1">#  with _from_sequence.  NB we are assuming here that _from_sequence</span>
+<span class="g g-Whitespace">    </span><span class="mi">991</span>     <span class="c1">#  is sufficiently strict that it casts appropriately.</span>
+<span class="g g-Whitespace">    </span><span class="mi">992</span>     <span class="n">preserve_dtype</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="ne">--&gt; </span><span class="mi">994</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_aggregate_series_pure_python</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">996</span> <span class="n">npvalues</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">maybe_convert_objects</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">try_float</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">997</span> <span class="k">if</span> <span class="n">preserve_dtype</span><span class="p">:</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/ops.py:1015,</span> in <span class="ni">BaseGrouper._aggregate_series_pure_python</span><span class="nt">(self, obj, func)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1012</span> <span class="n">splitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_splitter</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1014</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">splitter</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1015</span>     <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1016</span>     <span class="n">res</span> <span class="o">=</span> <span class="n">libreduction</span><span class="o">.</span><span class="n">extract_result</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1018</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">initialized</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1019</span>         <span class="c1"># We only do this validation on the first iteration</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/groupby/groupby.py:1857,</span> in <span class="ni">GroupBy.mean.&lt;locals&gt;.&lt;lambda&gt;</span><span class="nt">(x)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1853</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_numba_agg_general</span><span class="p">(</span><span class="n">sliding_mean</span><span class="p">,</span> <span class="n">engine_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1854</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1855</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cython_agg_general</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1856</span>         <span class="s2">&quot;mean&quot;</span><span class="p">,</span>
+<span class="ne">-&gt; </span><span class="mi">1857</span>         <span class="n">alt</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">Series</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="n">numeric_only</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1858</span>         <span class="n">numeric_only</span><span class="o">=</span><span class="n">numeric_only</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1859</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1860</span>     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;groupby&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/generic.py:11556,</span> in <span class="ni">NDFrame._add_numeric_operations.&lt;locals&gt;.mean</span><span class="nt">(self, axis, skipna, numeric_only, **kwargs)</span>
+<span class="g g-Whitespace">  </span><span class="mi">11539</span> <span class="nd">@doc</span><span class="p">(</span>
+<span class="g g-Whitespace">  </span><span class="mi">11540</span>     <span class="n">_num_doc</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">11541</span>     <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Return the mean of the values over the requested axis.&quot;</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">  </span><span class="mi">11554</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">11555</span> <span class="p">):</span>
+<span class="ne">&gt; </span><span class="mi">11556</span>     <span class="k">return</span> <span class="n">NDFrame</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="p">,</span> <span class="n">numeric_only</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/generic.py:11201,</span> in <span class="ni">NDFrame.mean</span><span class="nt">(self, axis, skipna, numeric_only, **kwargs)</span>
+<span class="g g-Whitespace">  </span><span class="mi">11194</span> <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span>
+<span class="g g-Whitespace">  </span><span class="mi">11195</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">11196</span>     <span class="n">axis</span><span class="p">:</span> <span class="n">Axis</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">  </span><span class="mi">11199</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">11200</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Series</span> <span class="o">|</span> <span class="nb">float</span><span class="p">:</span>
+<span class="ne">&gt; </span><span class="mi">11201</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stat_function</span><span class="p">(</span>
+<span class="g g-Whitespace">  </span><span class="mi">11202</span>         <span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="n">nanops</span><span class="o">.</span><span class="n">nanmean</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="p">,</span> <span class="n">numeric_only</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="g g-Whitespace">  </span><span class="mi">11203</span>     <span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/generic.py:11158,</span> in <span class="ni">NDFrame._stat_function</span><span class="nt">(self, name, func, axis, skipna, numeric_only, **kwargs)</span>
+<span class="g g-Whitespace">  </span><span class="mi">11154</span>     <span class="n">nv</span><span class="o">.</span><span class="n">validate_stat_func</span><span class="p">((),</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+<span class="g g-Whitespace">  </span><span class="mi">11156</span> <span class="n">validate_bool_kwarg</span><span class="p">(</span><span class="n">skipna</span><span class="p">,</span> <span class="s2">&quot;skipna&quot;</span><span class="p">,</span> <span class="n">none_allowed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="ne">&gt; </span><span class="mi">11158</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reduce</span><span class="p">(</span>
+<span class="g g-Whitespace">  </span><span class="mi">11159</span>     <span class="n">func</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="n">numeric_only</span><span class="o">=</span><span class="n">numeric_only</span>
+<span class="g g-Whitespace">  </span><span class="mi">11160</span> <span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/series.py:4670,</span> in <span class="ni">Series._reduce</span><span class="nt">(self, op, name, axis, skipna, numeric_only, filter_type, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4665</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">4666</span>         <span class="sa">f</span><span class="s2">&quot;Series.</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> does not allow </span><span class="si">{</span><span class="n">kwd_name</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="n">numeric_only</span><span class="si">}</span><span class="s2"> &quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">4667</span>         <span class="s2">&quot;with non-numeric dtypes.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">4668</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4669</span> <span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">errstate</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">4670</span>     <span class="k">return</span> <span class="n">op</span><span class="p">(</span><span class="n">delegate</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/nanops.py:96,</span> in <span class="ni">disallow.__call__.&lt;locals&gt;._f</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">94</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">errstate</span><span class="p">(</span><span class="n">invalid</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">96</span>         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span> <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>     <span class="c1"># we want to transform an object array</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="c1"># ValueError message to the more typical TypeError</span>
+<span class="g g-Whitespace">    </span><span class="mi">100</span>     <span class="c1"># e.g. this is normally a disallowed function on</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="c1"># object arrays that contain strings</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span>     <span class="k">if</span> <span class="n">is_object_dtype</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/nanops.py:158,</span> in <span class="ni">bottleneck_switch.__call__.&lt;locals&gt;.f</span><span class="nt">(values, axis, skipna, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span>         <span class="n">result</span> <span class="o">=</span> <span class="n">alt</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">157</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">158</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">alt</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">160</span> <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/nanops.py:421,</span> in <span class="ni">_datetimelike_compat.&lt;locals&gt;.new_func</span><span class="nt">(values, axis, skipna, mask, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">418</span> <span class="k">if</span> <span class="n">datetimelike</span> <span class="ow">and</span> <span class="n">mask</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">419</span>     <span class="n">mask</span> <span class="o">=</span> <span class="n">isna</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">421</span> <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">423</span> <span class="k">if</span> <span class="n">datetimelike</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">424</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">_wrap_results</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">orig_values</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="n">iNaT</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/nanops.py:727,</span> in <span class="ni">nanmean</span><span class="nt">(values, axis, skipna, mask)</span>
+<span class="g g-Whitespace">    </span><span class="mi">724</span>     <span class="n">dtype_count</span> <span class="o">=</span> <span class="n">dtype</span>
+<span class="g g-Whitespace">    </span><span class="mi">726</span> <span class="n">count</span> <span class="o">=</span> <span class="n">_get_counts</span><span class="p">(</span><span class="n">values</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">mask</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype_count</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">727</span> <span class="n">the_sum</span> <span class="o">=</span> <span class="n">_ensure_numeric</span><span class="p">(</span><span class="n">values</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype_sum</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">729</span> <span class="k">if</span> <span class="n">axis</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">the_sum</span><span class="p">,</span> <span class="s2">&quot;ndim&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">730</span>     <span class="n">count</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/nanops.py:1699,</span> in <span class="ni">_ensure_numeric</span><span class="nt">(x)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1696</span>             <span class="n">x</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1697</span>         <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1698</span>             <span class="c1"># e.g. &quot;foo&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1699</span>             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not convert </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> to numeric&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">1700</span> <span class="k">return</span> <span class="n">x</span>
+
+<span class="ne">TypeError</span>: Could not convert AFAFAFAFAFAFAFAFAFAF to numeric
+</pre></div>
+</div>
+</div>
+</div>
+<section id="plot-1-3d-spreidingsplot-over-bevolking-oppervlakte-en-uitstoot">
+<h3>PLOT 1: 3D spreidingsplot over bevolking, oppervlakte en uitstoot<a class="headerlink" href="#plot-1-3d-spreidingsplot-over-bevolking-oppervlakte-en-uitstoot" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Maak 3D scatter plot</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter3d</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;Population(2022)&#39;</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;Area&#39;</span><span class="p">],</span>
+    <span class="n">z</span><span class="o">=</span><span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;CO2 emission (Tons)&#39;</span><span class="p">],</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;CO2 emission (Tons)&#39;</span><span class="p">],</span>
+        <span class="n">colorscale</span><span class="o">=</span><span class="s1">&#39;Viridis&#39;</span><span class="p">,</span>
+        <span class="n">opacity</span><span class="o">=</span><span class="mf">0.8</span>
+    <span class="p">)</span>
+<span class="p">))</span>
+
+<span class="c1"># Pas layout aan</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">scene</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;CO2 uitstoot&#39;</span><span class="p">,</span>
+        <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Oppervlakte&#39;</span><span class="p">,</span>
+        <span class="n">zaxis_title</span><span class="o">=</span><span class="s1">&#39;Bevolkingsomvang&#39;</span>
+    <span class="p">),</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;3D spreidingsplot van de correlatie tussen CO2 uitstoot, bevolkingsomvang en totale oppervlakte per land&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># laat plot zien</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="3f7d52fe-e09a-4dd9-88dc-2da2e6278e7e" class="plotly-graph-div" style="height:700px; width:1000px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("3f7d52fe-e09a-4dd9-88dc-2da2e6278e7e")) {                    Plotly.newPlot(                        "3f7d52fe-e09a-4dd9-88dc-2da2e6278e7e",                        [{"marker":{"color":[141383623.0,258985941.8,3745970756.0,12443298.4,530796032.4,2654958.7,153888.0,18922634.1,7446420404.7,352528497.5,70975377.9,16397738878.9,5141797391.4,2299605147.1,156468022.0,746510322.7,1116685617.2,48107334.4,4576984204.1,12008853169.6,15813710.1,76479027.0,25755904.8,11484250.6,408828099.1,834732128.2,114290248.8,13507299568.7,310178563.6,3590232097.0,43814591.2,10050090.0,93342745.7,175102484.4,30461195670.9,10237609.5,9489186.2,20896397.7,2447152339.2,179600000000.0,1330032.0,2913119593.7,3962422.2,60044720.3,1783872.0,210794071.0,277088958.0,980055144.9,1478255087.1,533591250.3,253891252.1,11354986210.3,178097519.2,3896833556.7,16672313.5,3919361.2,609792024.7,991522676.7,5076292073.6,196712225.8,119422176.4,13968785.1,1543668133.5,35176393.8,180528717.6,26924495.6,42202782.4,2944676512.9,36964637214.0,23574448.3,24408373.2,231937715.5,11114480.0,605451188.2,88509205419.9,285000226.2,3688398396.5,30078197.6,6672761.5,70046223.8,348387684.8,69164394.2,8490116.0,88174278.1,59774662.0,203046928.7,1395879474.4,4747730657.0,132899386.1,41208010378.3,11205955898.8,15130258021.9,3569067641.7,2017567936.2,2044423791.5,22833847339.5,409365795.2,59230891010.5,562769217.9,12302895411.5,377055424.8,1742068.5,60228672.6,2368998436.7,803825972.0,67393556.5,909959312.8,591141940.7,50861630.3,46359631.8,1838179518.7,5267519.6,1482841851.8,702152973.3,48406210.2,76642490.5,43224409.9,4653706776.2,16356688.4,44797177.3,94935849.7,2612516.6,75649400.8,58221313.4,92251042.9,4874705.2,17622102727.1,2930174.1,1351276665.3,496289013.1,91038777.8,1429256.2,1397610377.9,139439230.7,458690022.0,54728283.6,4562215.5,98768915.8,10879295571.4,122366189.2,1691518863.3,148517777.8,36134166.2,3240051803.3,237827.4,4902926452.1,595214140.8,2391435509.0,912730258.6,3999534114.1,9371700.3,43227478.8,248757199.7,134601519.0,137589036.9,1661781707.3,2690663207.9,26099760794.4,2346249477.8,208848.0,1543197943.0,99203776.9,8077611619.5,106392044227.7,23078733.2,318375.3,5059762.6,11697932.6,3342893.2,5703536.2,5501496.1,2687346.3,12516372282.7,187090140.5,2488866386.7,10534584.5,30989080.3,1899962129.8,63802266.1,3681517868.3,773926794.1,8767743.5,29451117.1,18614936970.6,14826172367.0,30413532.2,13455636544.0,385852263.3,337834235.5,101558877.1,4756050561.3,2817118146.1,1693405768.1,7519534461.5,449555571.0,183283838.8,5849299055.1,3702207.2,54363375.6,3640612.4,1344887137.8,743352036.2,8669975637.7,2041757202.0,2750369.7,235984.1,78386879.1,29267056719.6,3725808866.5,76008796833.3,388100000000.0,335212643.2,5703313725.7,3886213.2,7088910081.8,2804876117.1,369043.7,555403659.2,214269540.2,719387735.9],"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"opacity":0.8,"size":8},"mode":"markers","x":[41128771.0,2842321.0,44903225.0,79824.0,35588987.0,null,null,93763.0,45510318.0,2780469.0,null,26177413.0,8939617.0,10358074.0,409984.0,1472233.0,171186372.0,281635.0,9534954.0,11655930.0,405272.0,13352864.0,null,782455.0,12224110.0,3233526.0,2630296.0,215313498.0,449002.0,6781953.0,22673762.0,12889576.0,16767842.0,27914536.0,38454327.0,593149.0,5579144.0,17723315.0,19603733.0,1425887337.0,null,51874024.0,836774.0,null,null,5180829.0,null,4030358.0,11212191.0,null,1251488.0,null,null,5882261.0,1120849.0,72737.0,11228821.0,18001000.0,110990103.0,6336392.0,1674908.0,3684032.0,1326062.0,1201670.0,123379924.0,null,929766.0,5540745.0,64626628.0,304557.0,null,2388992.0,2705992.0,3744385.0,83369843.0,33475870.0,10384971.0,56466.0,125438.0,395752.0,17843908.0,13859341.0,null,808726.0,11584996.0,10432860.0,7488865.0,9967308.0,372899.0,1417173173.0,275501339.0,88550570.0,44496122.0,5023109.0,9038309.0,59037474.0,2827377.0,123951692.0,11285869.0,19397998.0,54027487.0,131232.0,1802250.0,4268873.0,6630623.0,7529475.0,1850651.0,5489739.0,2305825.0,5302681.0,6812341.0,39327.0,2750055.0,647599.0,null,29611714.0,20405317.0,33938221.0,523787.0,22593590.0,533286.0,41569.0,367507.0,4736139.0,1299469.0,326101.0,127504125.0,114164.0,3272996.0,3398366.0,627082.0,null,37457971.0,32969518.0,54179306.0,2567012.0,12668.0,30547580.0,17564014.0,null,5185288.0,6948392.0,26207977.0,218541212.0,null,26069416.0,2093599.0,5434319.0,4576298.0,235824862.0,18055.0,5250072.0,4408581.0,10142619.0,6780744.0,34049588.0,115559009.0,39857145.0,10270865.0,3252407.0,2695122.0,974052.0,19659267.0,144713314.0,13776698.0,null,47657.0,179857.0,null,103948.0,222382.0,227380.0,36408820.0,17316449.0,7221365.0,107118.0,8605718.0,5975689.0,null,5643453.0,2119844.0,724273.0,17597511.0,59893885.0,51815810.0,10913164.0,47558630.0,21832143.0,46874204.0,618040.0,10549347.0,8740472.0,22125249.0,23893394.0,9952787.0,65497748.0,71697030.0,null,8848699.0,106858.0,1531044.0,12356117.0,85341241.0,6430770.0,null,11312.0,47249585.0,39701739.0,9441129.0,67508936.0,338289857.0,3422794.0,34627652.0,326740.0,28301696.0,98186856.0,null,33696614.0,20017675.0,16320537.0],"y":[652230.0,28748.0,2381741.0,468.0,1246700.0,91.0,null,442.0,2780400.0,29743.0,180.0,7692024.0,83871.0,86600.0,13943.0,765.0,147570.0,430.0,207600.0,30528.0,22966.0,112622.0,54.0,38394.0,1098581.0,51209.0,582000.0,8515767.0,null,110879.0,272967.0,27834.0,181035.0,475442.0,9984670.0,null,622984.0,1284000.0,756102.0,9706961.0,null,1141748.0,1862.0,342000.0,236.0,51100.0,null,56594.0,109884.0,null,9251.0,78865.0,null,43094.0,23200.0,751.0,48671.0,276841.0,1002450.0,21041.0,28051.0,117600.0,45227.0,17364.0,1104300.0,1393.0,18272.0,338424.0,551695.0,83534.0,4167.0,267668.0,10689.0,69700.0,357114.0,238533.0,131990.0,2166086.0,344.0,1628.0,108889.0,245857.0,36125.0,214969.0,27750.0,112492.0,null,93028.0,103000.0,3287590.0,1904569.0,1648195.0,438317.0,70273.0,20770.0,301336.0,10991.0,377930.0,89342.0,2724900.0,580367.0,811.0,null,17818.0,199951.0,236800.0,64559.0,10452.0,30355.0,111369.0,1759540.0,160.0,65300.0,2586.0,null,587041.0,118484.0,330803.0,300.0,1240192.0,316.0,181.0,1128.0,1030700.0,2040.0,374.0,1964375.0,702.0,33846.0,1564110.0,13812.0,102.0,446550.0,801590.0,676578.0,825615.0,21.0,147181.0,41850.0,18575.0,270467.0,130373.0,1267000.0,923768.0,260.0,120538.0,null,323802.0,309500.0,881912.0,459.0,null,75417.0,462840.0,406752.0,1285216.0,342353.0,312679.0,92090.0,8870.0,11586.0,null,238391.0,17098242.0,26338.0,394.0,261.0,616.0,242.0,389.0,2842.0,964.0,2149690.0,196722.0,88361.0,452.0,71740.0,710.0,null,49037.0,20273.0,28896.0,637657.0,1221037.0,100210.0,619745.0,505992.0,65610.0,1886068.0,163820.0,450295.0,41284.0,185180.0,36193.0,143100.0,945087.0,513120.0,null,56785.0,747.0,5130.0,163610.0,783562.0,488100.0,948.0,26.0,241550.0,603500.0,83600.0,242900.0,9372610.0,181034.0,447400.0,12189.0,916445.0,331212.0,null,527968.0,752612.0,390757.0],"z":[141383623.0,258985941.8,3745970756.0,12443298.4,530796032.4,2654958.7,153888.0,18922634.1,7446420404.7,352528497.5,70975377.9,16397738878.9,5141797391.4,2299605147.1,156468022.0,746510322.7,1116685617.2,48107334.4,4576984204.1,12008853169.6,15813710.1,76479027.0,25755904.8,11484250.6,408828099.1,834732128.2,114290248.8,13507299568.7,310178563.6,3590232097.0,43814591.2,10050090.0,93342745.7,175102484.4,30461195670.9,10237609.5,9489186.2,20896397.7,2447152339.2,179600000000.0,1330032.0,2913119593.7,3962422.2,60044720.3,1783872.0,210794071.0,277088958.0,980055144.9,1478255087.1,533591250.3,253891252.1,11354986210.3,178097519.2,3896833556.7,16672313.5,3919361.2,609792024.7,991522676.7,5076292073.6,196712225.8,119422176.4,13968785.1,1543668133.5,35176393.8,180528717.6,26924495.6,42202782.4,2944676512.9,36964637214.0,23574448.3,24408373.2,231937715.5,11114480.0,605451188.2,88509205419.9,285000226.2,3688398396.5,30078197.6,6672761.5,70046223.8,348387684.8,69164394.2,8490116.0,88174278.1,59774662.0,203046928.7,1395879474.4,4747730657.0,132899386.1,41208010378.3,11205955898.8,15130258021.9,3569067641.7,2017567936.2,2044423791.5,22833847339.5,409365795.2,59230891010.5,562769217.9,12302895411.5,377055424.8,1742068.5,60228672.6,2368998436.7,803825972.0,67393556.5,909959312.8,591141940.7,50861630.3,46359631.8,1838179518.7,5267519.6,1482841851.8,702152973.3,48406210.2,76642490.5,43224409.9,4653706776.2,16356688.4,44797177.3,94935849.7,2612516.6,75649400.8,58221313.4,92251042.9,4874705.2,17622102727.1,2930174.1,1351276665.3,496289013.1,91038777.8,1429256.2,1397610377.9,139439230.7,458690022.0,54728283.6,4562215.5,98768915.8,10879295571.4,122366189.2,1691518863.3,148517777.8,36134166.2,3240051803.3,237827.4,4902926452.1,595214140.8,2391435509.0,912730258.6,3999534114.1,9371700.3,43227478.8,248757199.7,134601519.0,137589036.9,1661781707.3,2690663207.9,26099760794.4,2346249477.8,208848.0,1543197943.0,99203776.9,8077611619.5,106392044227.7,23078733.2,318375.3,5059762.6,11697932.6,3342893.2,5703536.2,5501496.1,2687346.3,12516372282.7,187090140.5,2488866386.7,10534584.5,30989080.3,1899962129.8,63802266.1,3681517868.3,773926794.1,8767743.5,29451117.1,18614936970.6,14826172367.0,30413532.2,13455636544.0,385852263.3,337834235.5,101558877.1,4756050561.3,2817118146.1,1693405768.1,7519534461.5,449555571.0,183283838.8,5849299055.1,3702207.2,54363375.6,3640612.4,1344887137.8,743352036.2,8669975637.7,2041757202.0,2750369.7,235984.1,78386879.1,29267056719.6,3725808866.5,76008796833.3,388100000000.0,335212643.2,5703313725.7,3886213.2,7088910081.8,2804876117.1,369043.7,555403659.2,214269540.2,719387735.9],"type":"scatter3d"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"scene":{"xaxis":{"title":{"text":"CO2 uitstoot"}},"yaxis":{"title":{"text":"Oppervlakte"}},"zaxis":{"title":{"text":"Bevolkingsomvang"}}},"width":1000,"height":700,"title":{"text":"3D spreidingsplot van de correlatie tussen CO2 uitstoot, bevolkingsomvang en totale oppervlakte per land"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('3f7d52fe-e09a-4dd9-88dc-2da2e6278e7e');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<p><em>Beschrijving PLOT 1</em>:</p>
+<ul class="simple">
+<li><p>Op de x-as staat de bevolking per land</p></li>
+<li><p>Op de y-as staat de oppervlakte per land</p></li>
+<li><p>Op de z-as staat de CO2 uitstoot per land</p></li>
+<li><p>De kern van deze plot is dat er een correlatie is tussen de oppervlakte, bevolkingsomvang, en de hoeveelheid CO2-uitstoot van een land.</p></li>
+</ul>
+<p>Zoals te zien is in plot 1 is er een correlatie tussen de grootte van een land in vierkante kilometer, de bevolkingsomvang en de hoeveelheid CO2-uitstoot. De meeste landen zijn wat kleiner en hebben daardoor vaker een kleinere CO2-uitstoot, terwijl de grotere landen in de scatterplot, met een grotere bevolkingsomvang, ook meer CO2-uitstoot hebben. Dus hoe groter de bevolkingsomvang, hoe hoger de CO2-uitstoot is en dit toont een evenredig verband. Dit komt doordat grotere populaties over het algemeen meer hulpbronnen verbruiken, waaronder energie voor verwarming, koeling, transport, enz., wat kan leiden tot een grotere CO2-uitstoot. Daarnaast hebben grotere landen vaak meer natuurlijke hulpbronnen en ruimte voor industriële en agrarische activiteiten, wat kan leiden tot hogere CO2-uitstoot. Bovendien kunnen grotere landen ook meer infrastructuur en transportnetwerken hebben, wat ook bijdraagt aan de CO2-uitstoot.</p>
+</section>
+<section id="plot-2-donut-diagram-over-gemiddelde-procentuele-uitstoot-per-land-2010-2019">
+<h3>PLOT 2: Donut diagram over gemiddelde procentuele uitstoot per land (2010-2019)<a class="headerlink" href="#plot-2-donut-diagram-over-gemiddelde-procentuele-uitstoot-per-land-2010-2019" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bereken aandeel per land</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;CO2 emission (Tons)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;Percentage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;CO2 emission (Tons)&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Filter landen die lager dan 3% hebben</span>
+<span class="n">small_emitters</span> <span class="o">=</span> <span class="n">CO2_grouped</span><span class="p">[</span><span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;Percentage&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="c1"># Groepeer lager dan 3% als overige categorie</span>
+<span class="n">small_emitters_total</span> <span class="o">=</span> <span class="n">small_emitters</span><span class="p">[</span><span class="s1">&#39;CO2 emission (Tons)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">small_emitters_row</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">small_emitters_total</span><span class="p">],</span> <span class="s1">&#39;CO2 emission (Tons)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">small_emitters_total</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Overig&#39;</span><span class="p">])</span>
+
+<span class="c1"># Maak overige categorie</span>
+<span class="n">combined_grouped</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">CO2_grouped</span><span class="p">[</span><span class="n">CO2_grouped</span><span class="p">[</span><span class="s1">&#39;Percentage&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">],</span> <span class="n">small_emitters_row</span><span class="p">])</span>
+
+<span class="c1"># Maak plot</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">combined_grouped</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;CO2 emission (Tons)&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">combined_grouped</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">hole</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+
+<span class="c1"># Pas layout aan</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Gemiddelde procentuele CO2 uitstoot per land tussen 2010 en 2019&#39;</span><span class="p">,</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">650</span>
+<span class="p">)</span>
+
+<span class="c1"># Fix labels</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">textposition</span><span class="o">=</span><span class="s1">&#39;outside&#39;</span><span class="p">,</span> <span class="n">textinfo</span><span class="o">=</span><span class="s1">&#39;label+percent&#39;</span><span class="p">)</span>
+
+<span class="c1"># laat plot zien</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="8f2936ef-48bf-46bb-bedb-df73bb4fea3a" class="plotly-graph-div" style="height:650px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("8f2936ef-48bf-46bb-bedb-df73bb4fea3a")) {                    Plotly.newPlot(                        "8f2936ef-48bf-46bb-bedb-df73bb4fea3a",                        [{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hole":0.8,"hovertemplate":"index=%{label}<br>CO2 emission (Tons)=%{value}<extra></extra>","labels":["China","Germany","Japan","Russia","United Kingdom","United States","Overig"],"legendgroup":"","name":"","showlegend":true,"values":[179600000000.0,88509205419.9,59230891010.5,106392044227.7,76008796833.3,388100000000.0,565844308995.4],"type":"pie","textinfo":"label+percent","textposition":"outside"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"legend":{"tracegroupgap":0},"margin":{"t":60},"title":{"text":"Gemiddelde procentuele CO2 uitstoot per land tussen 2010 en 2019"},"showlegend":false,"height":650},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('8f2936ef-48bf-46bb-bedb-df73bb4fea3a');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<p><em>Beschrijving PLOT 2</em>:</p>
+<ul class="simple">
+<li><p>Voor elk land is het procentuele aandeel van de mondiale CO2-uitstoot berekent.</p></li>
+<li><p>De kern van deze plot is dat er een aantal landen zijn die procentueel veel meer uitstoten dan anderen.</p></li>
+</ul>
+<p>In de bovenstaande Donut chart is de gemiddelde procentuele CO2-uitstoot per land tussen 2010 en 2019 te zien. De plot onthult dat de Verenigde Staten maar liefst 26.5% van de mondiale CO2-uitstoot veroorzaakt, waarmee het de voornaamste verantwoordelijke is. Direct na de Verenigde Staten staat China als één na hoogste land met de grootste CO2-uitstoot. Op rangvolgorde volgen Rusland, Duitsland, Verenigd Koninkrijk en uiteindelijk Japan als de 6 landen die het meeste bijdragen aan deze uitstoot. De overige landen liggen allemaal onder de 3.0% uitstoot op mondiaal niveau, waardoor ze in vergelijking met de andere landen bescheiden bijdragen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lees dataframe temperature changes in</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;temperature_change.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin-1&#39;</span><span class="p">)</span>
+<span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Area Code</th>
+      <th>Area</th>
+      <th>Months Code</th>
+      <th>Months</th>
+      <th>Element Code</th>
+      <th>Element</th>
+      <th>Unit</th>
+      <th>Y1961</th>
+      <th>Y1962</th>
+      <th>Y1963</th>
+      <th>...</th>
+      <th>Y2010</th>
+      <th>Y2011</th>
+      <th>Y2012</th>
+      <th>Y2013</th>
+      <th>Y2014</th>
+      <th>Y2015</th>
+      <th>Y2016</th>
+      <th>Y2017</th>
+      <th>Y2018</th>
+      <th>Y2019</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>Afghanistan</td>
+      <td>7001</td>
+      <td>January</td>
+      <td>7271</td>
+      <td>Temperature change</td>
+      <td>°C</td>
+      <td>0.777</td>
+      <td>0.062</td>
+      <td>2.744</td>
+      <td>...</td>
+      <td>3.601</td>
+      <td>1.179</td>
+      <td>-0.583</td>
+      <td>1.233</td>
+      <td>1.755</td>
+      <td>1.943</td>
+      <td>3.416</td>
+      <td>1.201</td>
+      <td>1.996</td>
+      <td>2.951</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Afghanistan</td>
+      <td>7001</td>
+      <td>January</td>
+      <td>6078</td>
+      <td>Standard Deviation</td>
+      <td>°C</td>
+      <td>1.950</td>
+      <td>1.950</td>
+      <td>1.950</td>
+      <td>...</td>
+      <td>1.950</td>
+      <td>1.950</td>
+      <td>1.950</td>
+      <td>1.950</td>
+      <td>1.950</td>
+      <td>1.950</td>
+      <td>1.950</td>
+      <td>1.950</td>
+      <td>1.950</td>
+      <td>1.950</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>Afghanistan</td>
+      <td>7002</td>
+      <td>February</td>
+      <td>7271</td>
+      <td>Temperature change</td>
+      <td>°C</td>
+      <td>-1.743</td>
+      <td>2.465</td>
+      <td>3.919</td>
+      <td>...</td>
+      <td>1.212</td>
+      <td>0.321</td>
+      <td>-3.201</td>
+      <td>1.494</td>
+      <td>-3.187</td>
+      <td>2.699</td>
+      <td>2.251</td>
+      <td>-0.323</td>
+      <td>2.705</td>
+      <td>0.086</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>Afghanistan</td>
+      <td>7002</td>
+      <td>February</td>
+      <td>6078</td>
+      <td>Standard Deviation</td>
+      <td>°C</td>
+      <td>2.597</td>
+      <td>2.597</td>
+      <td>2.597</td>
+      <td>...</td>
+      <td>2.597</td>
+      <td>2.597</td>
+      <td>2.597</td>
+      <td>2.597</td>
+      <td>2.597</td>
+      <td>2.597</td>
+      <td>2.597</td>
+      <td>2.597</td>
+      <td>2.597</td>
+      <td>2.597</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>Afghanistan</td>
+      <td>7003</td>
+      <td>March</td>
+      <td>7271</td>
+      <td>Temperature change</td>
+      <td>°C</td>
+      <td>0.516</td>
+      <td>1.336</td>
+      <td>0.403</td>
+      <td>...</td>
+      <td>3.390</td>
+      <td>0.748</td>
+      <td>-0.527</td>
+      <td>2.246</td>
+      <td>-0.076</td>
+      <td>-0.497</td>
+      <td>2.296</td>
+      <td>0.834</td>
+      <td>4.418</td>
+      <td>0.234</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>9651</th>
+      <td>5873</td>
+      <td>OECD</td>
+      <td>7018</td>
+      <td>JunJulAug</td>
+      <td>6078</td>
+      <td>Standard Deviation</td>
+      <td>°C</td>
+      <td>0.247</td>
+      <td>0.247</td>
+      <td>0.247</td>
+      <td>...</td>
+      <td>0.247</td>
+      <td>0.247</td>
+      <td>0.247</td>
+      <td>0.247</td>
+      <td>0.247</td>
+      <td>0.247</td>
+      <td>0.247</td>
+      <td>0.247</td>
+      <td>0.247</td>
+      <td>0.247</td>
+    </tr>
+    <tr>
+      <th>9652</th>
+      <td>5873</td>
+      <td>OECD</td>
+      <td>7019</td>
+      <td>SepOctNov</td>
+      <td>7271</td>
+      <td>Temperature change</td>
+      <td>°C</td>
+      <td>0.036</td>
+      <td>0.461</td>
+      <td>0.665</td>
+      <td>...</td>
+      <td>0.958</td>
+      <td>1.106</td>
+      <td>0.885</td>
+      <td>1.041</td>
+      <td>0.999</td>
+      <td>1.670</td>
+      <td>1.535</td>
+      <td>1.194</td>
+      <td>0.581</td>
+      <td>1.233</td>
+    </tr>
+    <tr>
+      <th>9653</th>
+      <td>5873</td>
+      <td>OECD</td>
+      <td>7019</td>
+      <td>SepOctNov</td>
+      <td>6078</td>
+      <td>Standard Deviation</td>
+      <td>°C</td>
+      <td>0.378</td>
+      <td>0.378</td>
+      <td>0.378</td>
+      <td>...</td>
+      <td>0.378</td>
+      <td>0.378</td>
+      <td>0.378</td>
+      <td>0.378</td>
+      <td>0.378</td>
+      <td>0.378</td>
+      <td>0.378</td>
+      <td>0.378</td>
+      <td>0.378</td>
+      <td>0.378</td>
+    </tr>
+    <tr>
+      <th>9654</th>
+      <td>5873</td>
+      <td>OECD</td>
+      <td>7020</td>
+      <td>Meteorological year</td>
+      <td>7271</td>
+      <td>Temperature change</td>
+      <td>°C</td>
+      <td>0.165</td>
+      <td>-0.009</td>
+      <td>0.134</td>
+      <td>...</td>
+      <td>1.246</td>
+      <td>0.805</td>
+      <td>1.274</td>
+      <td>0.991</td>
+      <td>0.811</td>
+      <td>1.282</td>
+      <td>1.850</td>
+      <td>1.349</td>
+      <td>1.088</td>
+      <td>1.297</td>
+    </tr>
+    <tr>
+      <th>9655</th>
+      <td>5873</td>
+      <td>OECD</td>
+      <td>7020</td>
+      <td>Meteorological year</td>
+      <td>6078</td>
+      <td>Standard Deviation</td>
+      <td>°C</td>
+      <td>0.260</td>
+      <td>0.260</td>
+      <td>0.260</td>
+      <td>...</td>
+      <td>0.260</td>
+      <td>0.260</td>
+      <td>0.260</td>
+      <td>0.260</td>
+      <td>0.260</td>
+      <td>0.260</td>
+      <td>0.260</td>
+      <td>0.260</td>
+      <td>0.260</td>
+      <td>0.260</td>
+    </tr>
+  </tbody>
+</table>
+<p>9656 rows × 66 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># zorg dat landen kolom in beide sets zelfde naam heeft</span>
+<span class="n">temp</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Area&#39;</span><span class="p">:</span> <span class="s1">&#39;Country&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># stel conditie om alleen op verschil te meten</span>
+<span class="n">condition</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp</span><span class="p">[</span><span class="s1">&#39;Element Code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7271</span><span class="p">)</span>
+
+<span class="c1"># Filter rijen uit die niet aan conditie voldoen</span>
+<span class="n">filtered_temp</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">condition</span><span class="p">]</span>
+
+<span class="c1"># groepeer op land</span>
+<span class="n">temp_grouped</span> <span class="o">=</span> <span class="n">filtered_temp</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Country&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># drop onnodige kolommen</span>
+<span class="n">temp_correct</span> <span class="o">=</span> <span class="n">temp_grouped</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Area Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Months Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Element Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1961&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1962&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1963&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1964&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1965&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1966&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1967&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1968&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1969&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1970&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1971&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1972&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1973&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1974&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1975&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1976&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1977&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1978&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1979&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1980&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1981&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1982&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1983&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1984&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1985&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1986&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1987&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1988&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1989&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1990&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1991&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1992&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1993&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1994&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1995&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1996&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1997&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1998&#39;</span><span class="p">,</span> <span class="s1">&#39;Y1999&#39;</span><span class="p">,</span> <span class="s1">&#39;Y2000&#39;</span><span class="p">,</span> <span class="s1">&#39;Y2001&#39;</span><span class="p">,</span> <span class="s1">&#39;Y2002&#39;</span><span class="p">,</span> <span class="s1">&#39;Y2003&#39;</span><span class="p">,</span> <span class="s1">&#39;Y2004&#39;</span><span class="p">,</span> <span class="s1">&#39;Y2005&#39;</span><span class="p">,</span> <span class="s1">&#39;Y2006&#39;</span><span class="p">,</span> <span class="s1">&#39;Y2007&#39;</span><span class="p">,</span> <span class="s1">&#39;Y2008&#39;</span><span class="p">,</span> <span class="s1">&#39;Y2009&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># bereken gemiddelde stijging per land</span>
+<span class="n">temp_correct</span><span class="p">[</span><span class="s1">&#39;Average&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_correct</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># maak aparte frame voor gemiddelde</span>
+<span class="n">temp_avg</span> <span class="o">=</span> <span class="n">temp_correct</span><span class="p">[</span><span class="s1">&#39;Average&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\thijs\AppData\Local\Temp\ipykernel_9288\2875976270.py:11: FutureWarning:
+
+The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-3-spreidingsplot-voor-temperatuursstijging-en-co2-uitstoot-per-land-2010-2019">
+<h3>PLOT 3: Spreidingsplot voor temperatuursstijging en CO2 uitstoot per land (2010-2019)<a class="headerlink" href="#plot-3-spreidingsplot-voor-temperatuursstijging-en-co2-uitstoot-per-land-2010-2019" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># voeg datasets samen</span>
+<span class="n">merged_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">CO2_grouped</span><span class="p">,</span> <span class="n">temp_avg</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+<span class="n">merged_df</span>
+
+<span class="c1"># Maak scatter plot</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">merged_df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;CO2 emission (Tons)&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Average&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;CO2&#39;</span><span class="p">)</span>
+
+<span class="c1"># Stel plot titel en labels in</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Correlatie tussen CO2 uitstoot en temperatuursstijging per land&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;CO2 uitstoot per land (ton)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Temperatuursstijging&#39;</span><span class="p">)</span>
+
+<span class="c1"># laat plot zien</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/9063743ceac00e42b69c3a0b498c682ddd50c4249d694b2a30d0cf51361b5e6a.png" src="_images/9063743ceac00e42b69c3a0b498c682ddd50c4249d694b2a30d0cf51361b5e6a.png" />
+</div>
+</div>
+<p><em>Beschrijving PLOT 3</em>:</p>
+<ul class="simple">
+<li><p>Op de x-as staat de CO2-uitstoot per land (in tonnen)</p></li>
+<li><p>Op de y-as staat temperatuursstijging per land in graden Celsius</p></li>
+<li><p>Voor deze plot zijn de twee datasets samengevoegd. Beide variabelen komen dus oorspronkelijk uit andere datasets.</p></li>
+<li><p>De kern van deze plot is dat er geen correlatie is tussen de temperatuurstijging in een land en de hoeveelheid CO2-uitstoot in datzelfde land.</p></li>
+</ul>
+<p>Zoals te zien is in plot 3, is er geen duidelijke correlatie tussen een land dat een hoge CO₂-uitstoot heeft en een temperatuurverhoging in dat specifieke land. Een verklaring hiervoor kan zijn dat de CO₂ die uitgestoten wordt, niet op een nationaal niveau maar op een mondiaal niveau zorgt voor een temperatuurverhoging. Broeikasgassen zoals CO₂ houden warmte vast in de atmosfeer, wat bijdraagt aan de opwarming van de aarde. Dit is een globaal fenomeen, omdat deze gassen gelijkmatig over de hele aardatmosfeer worden verspreid, ongeacht waar ze oorspronkelijk zijn uitgestoten (Chen et al., 2014). Het is dus niet zo dat het gebied waar meer CO₂ wordt uitgestoten ook per se warmer wordt.</p>
+</section>
+<section id="plot-4-landen-met-een-stijging-van-1-5-graad-celsius">
+<h3>PLOT 4: Landen met een stijging van 1.5 graad celsius<a class="headerlink" href="#plot-4-landen-met-een-stijging-van-1-5-graad-celsius" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># voeg datasets samen</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">CO2_grouped</span><span class="p">,</span> <span class="n">temp_avg</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+
+<span class="c1"># Filter data op 1.5 graad of hoger</span>
+<span class="n">filtered_result</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;Average&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">1.5</span><span class="p">]</span>
+
+<span class="c1"># stel grootte in</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># maak bar plot</span>
+<span class="n">filtered_result</span><span class="p">[</span><span class="s1">&#39;Average&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+
+<span class="c1"># Stel x-axis label in</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Land&#39;</span><span class="p">)</span>
+
+<span class="c1"># Stel y-axis label in</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Gemiddelde toename&#39;</span><span class="p">)</span>
+
+<span class="c1"># Maak titel</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gemiddelde temperatuur stijging tussen 2010 en 2019 per land (hoger dan 1,5 graden)&#39;</span><span class="p">)</span>
+
+<span class="c1"># laat plot zien</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/26e1c71a3e3b117848b2568a800095bf98b748eaf26421555f425f0b78997250.png" src="_images/26e1c71a3e3b117848b2568a800095bf98b748eaf26421555f425f0b78997250.png" />
+</div>
+</div>
+<p><em>Beschrijving PLOT 4</em>:</p>
+<ul class="simple">
+<li><p>Op de x-as staan landen die in aanmerking komen voor het feit dat hun temperatuur boven de anderhalve graad Celsius is gestegen.</p></li>
+<li><p>Op de y-as staat temperatuursstijging per in graden Celsius</p></li>
+<li><p>Voor deze plot zijn de landen gefilterd op het feit of ze voldoen aan de anderhalve graad norm.</p></li>
+<li><p>De kern van deze plot is dat er veel landen zijn die niet perse een hoge uitstoot hebben, maar toch de dupe zijn van temperatuursstijgingen.</p></li>
+</ul>
+<p>In plot 4 zijn de landen te zien die te maken hebben met een opwarming van anderhalf graden celsius of hoger. Er zijn twee dingen merkwaardig aan deze plot. Allereerst, zijn alle landen op deze plot onderdeel van het noordelijk halfrond van de aarde. Wat ook opvallend is, is dat veel van deze landen geen grote uitstoters zijn. Neem bijvoorbeeld een land als Luxemburg of Tsjechië, dat zijn twee vrij ‘onschuldige’ landen als het gaat om mondiale uitstoot. Die landen hebben echter toch te maken met een aanzienlijk temperatuursverschil ten op zichte van een decennium geleden. Dit bevestigt dan ook het feit dat klimaatverandering geen lokale kwestie is, maar juist een probleem wat invloed heeft op alle landen, ongeacht het aandel van uitstoot.</p>
+</section>
+<section id="plot-5-gemiddelde-mondiale-temperatuursstijging">
+<h3>PLOT 5: Gemiddelde mondiale temperatuursstijging<a class="headerlink" href="#plot-5-gemiddelde-mondiale-temperatuursstijging" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Drop &#39;Average&#39; kolom van DataFrame</span>
+<span class="n">temp_correct</span> <span class="o">=</span> <span class="n">temp_correct</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Average&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Herstructureer data</span>
+<span class="n">melted_data</span> <span class="o">=</span> <span class="n">temp_correct</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s1">&#39;Temperature&#39;</span><span class="p">)</span>
+
+<span class="c1"># Groepeer data op jaarbasis</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">melted_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Year&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Maak lijndiagram</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Temperature&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
+
+<span class="c1"># Voeg titels en as labels toe</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Jaar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Temperatuurstijging&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gemiddelde mondiale temperatuurstijging tussen 2010 en 2019&#39;</span><span class="p">)</span>
+
+<span class="c1"># laat plot zien</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2385f5bc63148f2f0fa9701ae732c092779e3f5233e18fe76f4ad5417bf8c89c.png" src="_images/2385f5bc63148f2f0fa9701ae732c092779e3f5233e18fe76f4ad5417bf8c89c.png" />
+</div>
+</div>
+<p><em>Beschrijving PLOT 5</em>:</p>
+<ul class="simple">
+<li><p>Op de x-as staan de jaartallen.</p></li>
+<li><p>Op de y-as staat temperatuursstijging per in graden Celsius</p></li>
+<li><p>De kern van deze plot is dat de mondiale temperatuur tussen 2010 en 2019 gestegen is.</p></li>
+</ul>
+<p>In plot 5 is de gemiddelde mondiale temperatuurstijging tussen 2010 en 2019 te zien. Er valt te zien dat na 2012, de temperatuur op wereldwijde schaal elk jaar meer gestegen is. Er kan dus gesteld worden dat het gemiddeld warmer is geworden op de wereld. Dit past bij het perspectief dat klimaatverandering een mondiaal fenomeen is, en niet iets wat alleen in bepaalde landen plaatsvindt. Deze trend kan dus ook gekoppeld worden aan de wereldwijde opwarming van de aarde. Als de waarde elk jaar boven de nul uitkomt, is er sowieso sprake van opwarming, maar omdat de stijging bijna elk jaar hoger is dan het jaar ervoor kan er worden gesteld dat de temperatuur dus jaarlijkst stijgt.</p>
+</section>
+</section>
+<section id="bronnen">
+<h2>BRONNEN<a class="headerlink" href="#bronnen" title="Permalink to this heading">#</a></h2>
+<p>Chen, Y., Li, B., Li, Z., &amp; Shi, X. (2014). Quantitatively evaluating the effects of CO2 emission on temperature rise. Quaternary International, 336, 171–175. <a class="reference external" href="https://doi.org/10.1016/j.quaint.2013.11.031">https://doi.org/10.1016/j.quaint.2013.11.031</a></p>
+<p>Ministerie van Infrastructuur en Waterstaat. (2023, April 26). Klimaatverandering en gevolgen. Klimaatverandering | <a class="reference external" href="http://Rijksoverheid.nl">Rijksoverheid.nl</a>. <a class="reference external" href="https://www.rijksoverheid.nl/onderwerpen/klimaatverandering/gevolgen-klimaatverandering">https://www.rijksoverheid.nl/onderwerpen/klimaatverandering/gevolgen-klimaatverandering</a></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="generative-ai-vermelding">
+<h1>GENERATIVE AI VERMELDING<a class="headerlink" href="#generative-ai-vermelding" title="Permalink to this heading">#</a></h1>
+<p>Voor dit project is er voor een aantal gevallen gebruik gemaakt van het platform ChatGPT van OpenAI.</p>
+<p><img alt="Chatgpt%20vermelding%20data%20story.png" src="attachment:Chatgpt%20vermelding%20data%20story.png" /></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Datastory Draft C3 Informatievisualisatie</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#opwarming-van-de-aarde-hoe-zit-dat-nou">Opwarming van de aarde, hoe zit dat nou?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introductie">Introductie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datapreprocessing">Datapreprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-1-3d-spreidingsplot-over-bevolking-oppervlakte-en-uitstoot">PLOT 1: 3D spreidingsplot over bevolking, oppervlakte en uitstoot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-2-donut-diagram-over-gemiddelde-procentuele-uitstoot-per-land-2010-2019">PLOT 2: Donut diagram over gemiddelde procentuele uitstoot per land (2010-2019)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-3-spreidingsplot-voor-temperatuursstijging-en-co2-uitstoot-per-land-2010-2019">PLOT 3: Spreidingsplot voor temperatuursstijging en CO2 uitstoot per land (2010-2019)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-4-landen-met-een-stijging-van-1-5-graad-celsius">PLOT 4: Landen met een stijging van 1.5 graad celsius</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-5-gemiddelde-mondiale-temperatuursstijging">PLOT 5: Gemiddelde mondiale temperatuursstijging</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bronnen">BRONNEN</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#generative-ai-vermelding">GENERATIVE AI VERMELDING</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yen-Chia Hsu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
